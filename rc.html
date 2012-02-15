@@ -162,19 +162,29 @@ the repo config).</p>
 
 <p>The second choice is to give it a space separated list of settings you
 consider safe.  (These are actually treated as a set of perl regular
-expression patterns, and any one of them must match).  For example:
-<code>$GL_GITCONFIG_KEYS = "core\\.logAllRefUpdates core\\..*compression";</code>
-allows repo admins to set one of those 3 config keys (yes, that second
-pattern matches two settings from "man git-config", if you look).</p>
+expression patterns, and any one of them must match).</p>
+
+<p>For example, this allows repo admins to set one of those 3 config
+keys (yes, that second pattern matches two settings from "man
+git-config", if you look):</p>
+
+<pre><code>$GL_GITCONFIG_KEYS = 'core\.logAllRefUpdates core\..*compression';
+</code></pre>
+
+<p>Each pattern should match the <em>whole</em> key (in other words, there
+is an implicit <code>^</code> at the start of each pattern, and a <code>$</code> at the
+end).</p>
+
+<p>Note: if you don't know regex syntax, please learn, but briefly, a
+literal period must be escaped with a backslash, as you can see in the
+example above.  In addition, if you use double quotes instead of single
+quotes, you will need to escape the backslash itself, like <code>"foo\\..*"</code>.</p>
+
+<p>It's probably simplest to stick to single quotes.</p>
 
 <p>The third choice (which you may have guessed already if you're familiar
 with regular expressions) is to allow anything and everything:
-<code>$GL_GITCONFIG_KEYS = ".*";</code></p>
-
-<p>NOTE that due to some quoting and interpolation issues I have not been
-able to look at, a literal "." needs to be specified in this string as
-<code>\\.</code> (two backslashes and a dot).  So this is how you'd allow any keys in
-the "foo" section: <code>$GL_GITCONFIG_KEYS = "foo\\..*";</code></p></li>
+<code>$GL_GITCONFIG_KEYS = '.*';</code></p></li>
 <li><p><code>$GL_NO_CREATE_REPOS</code>, boolean, default 0</p>
 
 <p>DO NOT CHANGE THIS unless you have other means to create repos and
