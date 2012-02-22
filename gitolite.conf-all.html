@@ -584,15 +584,15 @@ warning message when you push, a non-existant user.</p></li>
 
 <h3>enforcing a no-merges policy</h3>
 
-<p>Some people want to enforce a no-merges policy for various reasons.  This
-behaviour can be enabled by suffixing an "M" to the end of any permission
-starting with <code>RW</code> (i.e., all of them except <code>R</code>).  So for instance, <code>RW</code>
-becomes <code>RWM</code>, and <code>RW+</code> becomes <code>RW+M</code>, etc.</p>
+<p>Some people want to enforce a no-merges policy for various reasons.  The new
+"M" qualifier can be used to specify who is allowed to push merge commits.
+This works just like "C" and "D" in the previous section, so <strong>please read
+that for a more detailed description</strong> and apply the same ideas, (including
+the <code>@all</code> trick!) to "M" for "allow merge commits".</p>
 
-<p>The rules are exactly the same as for "C" and "D": once a repo has an "M"
-qualifier tied to any access rule, all rules for that repo are subject to
-merge checking, and merge commits will only be allowed when the rule has the
-"M" qualifier.</p>
+<p>The only other thing to remember is that this qualifier, if used, goes at the
+end of any permission starting with <code>RW</code> (i.e., all of them except <code>R</code>).  For
+example, <code>RW</code> becomes <code>RWM</code>, <code>RW+</code> becomes <code>RW+M</code>, <code>RW+CD</code> becomes <code>RW+CDM</code>.</p>
 
 <!-- file: conf "summary: permissions" -->
 
