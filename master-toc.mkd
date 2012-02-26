@@ -491,6 +491,29 @@
 
 ----
 
+<a name="virtual-refs"></a>
+
+### virtual-refs
+
+  * [virtual refs](virtual-refs.html#virtual_refs_virtual_refs_)
+      * [rule matching recap](virtual-refs.html#virtual_refs_rule_matching_recap_)
+      * [what is a virtual ref](virtual-refs.html#virtual_refs_what_is_a_virtual_ref_)
+      * [fallthru is success here](virtual-refs.html#virtual_refs_fallthru_is_success_here_)
+      * [how it works -- overview](virtual-refs.html#virtual_refs_how_it_works_overview_)
+      * [how it works -- details](virtual-refs.html#virtual_refs_how_it_works_details_)
+          * [arguments passed to the vref code](virtual-refs.html#virtual_refs_arguments_passed_to_the_vref_code_)
+      * [what (else) can the vref code pass back](virtual-refs.html#virtual_refs_what_else_can_the_vref_code_pass_back_)
+      * [VREFs shipped in contrib](virtual-refs.html#virtual_refs_VREFs_shipped_in_contrib_)
+          * [number of new files](virtual-refs.html#virtual_refs_number_of_new_files_)
+          * [advanced filetype detection](virtual-refs.html#virtual_refs_advanced_filetype_detection_)
+          * [checking author email](virtual-refs.html#virtual_refs_checking_author_email_)
+          * [catching duplicate pubkeys](virtual-refs.html#virtual_refs_catching_duplicate_pubkeys_)
+      * [other ideas -- code welcome!](virtual-refs.html#virtual_refs_other_ideas_code_welcome__)
+          * ["no non-merge first-parents"](virtual-refs.html#virtual_refs_no_non_merge_first_parents__)
+          * [other ideas for VREFs](virtual-refs.html#virtual_refs_other_ideas_for_VREFs_)
+
+----
+
 <a name="who-uses-it"></a>
 
 ### who-uses-it

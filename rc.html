@@ -344,13 +344,17 @@ names.</p>
 <p>The default produces files like <code>~/.gitolite/logs/gitolite-2009-09.log</code>.
 If you make up your own templates, <strong>PLEASE MAKE SURE</strong> the directory
 exists and is writable; gitolite won't do that for you unless it is the
-default, ("$GL_ADMINDIR/logs")</p></li>
+default, ("$GL_ADMINDIR/logs").</p>
+
+<p>Note that <code>%d</code> is also available if you want.</p></li>
 <li><p><code>$GL_PERFLOGT</code>, string, default undef</p>
 
 <p>This gives the location of the performance log files.  Uncomment and set
 this variable if you want performance logging.  Performance log files are
 kept separate from access log files because they store different, usually
-much shorter term, information.</p></li>
+much shorter term, information.</p>
+
+<p>See the previous variable (<code>GL_LOGT</code>) for template related info.</p></li>
 <li><p><code>$GL_SITE_INFO</code>, string, default undef</p>
 
 <p>Some installations would like to give their users customised information
